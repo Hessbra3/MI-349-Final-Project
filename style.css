@@ -1,0 +1,67 @@
+/*
+	Base layout and typography for the site.
+	Moved from inline styles in `index.html` and reformatted for clarity.
+*/
+
+:root {
+	--max-width: 900px;
+	--gap: 1.5rem;
+	--link-bg: #efefef;
+	--link-color: #111;
+	--title-size: 3rem;
+	--title-size-sm: 2rem;
+	--col-min: 220px;
+}
+
+#main-title {
+	font-size: var(--title-size);
+	margin: 1rem 0;
+}
+
+main {
+	max-width: var(--max-width);
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.columns {
+	display: flex;
+	gap: var(--gap);
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.col {
+	flex: 1 1 300px;
+	min-width: var(--col-min);
+	font-size: 1.125rem;
+	line-height: 1.5;
+}
+
+/* Small visual treatment for the footer links */
+footer {
+	margin-top: 3rem;
+	text-align: center;
+}
+
+.links a {
+	display: inline-block;
+	margin-right: 1rem;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+	border-radius: 6px;
+	background: var(--link-bg);
+	color: var(--link-color);
+}
+
+@media (max-width: 560px) {
+	#main-title {
+		font-size: var(--title-size-sm);
+	}
+
+	.columns {
+		flex-direction: column;
+	}
+}
+
+
