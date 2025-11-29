@@ -9,6 +9,7 @@
 	--link-bg: rgba(255,255,255,0.06);
 	--link-color: #1a73e8; /* primary blue for links */
 	--accent: #00e5ff; /* neon accent */
+	--title-blue: #1558c8; /* slightly darker blue for paragraph titles */
 	--bg: #061024; /* dark gaming background */
 	--panel: #071827;
 	--muted: #9aa7bd;
@@ -66,8 +67,8 @@ header h1 {
 .top-right a { color: var(--link-color); background: transparent; padding: 0.25rem .5rem; border-radius: 6px; }
 
 /* Columns used on index */
-.columns { display: flex; gap: var(--gap); align-items: flex-start; flex-wrap: wrap; }
-.col { flex: 1 1 300px; min-width: var(--col-min); font-size: 1.05rem; line-height: 1.6; color: #dfeaf6; }
+.columns { display: flex; gap: calc(var(--gap) * 1.5); align-items: flex-start; flex-wrap: wrap; justify-content: space-between; }
+.col { flex: 0 1 48%; min-width: var(--col-min); font-size: 1.05rem; line-height: 1.6; color: #dfeaf6; }
 
 /* Main card style for centered paragraphs */
 .card {
@@ -138,7 +139,7 @@ header, .site-main, .card, .links, .top-right { position: relative; z-index: 5; 
 #side-paragraph > p:first-of-type {
 	text-align: center;
 	font-weight: 600;
-	color: var(--accent);
+	color: var(--title-blue);
 	max-width: 44rem;
 	margin: 0 auto 0.75rem auto;
 }
@@ -150,13 +151,16 @@ header, .site-main, .card, .links, .top-right { position: relative; z-index: 5; 
 #main-paragraph > .intro-line {
 	text-align: center;
 	font-weight: 700;
-	color: var(--accent);
+	color: var(--title-blue);
 	font-size: 1.25rem;
 	margin: 0 0 0.9rem 0;
 }
 
 /* Slight spacing for the main paragraph block */
 #main-paragraph p { margin: 0 0 0.9rem 0; }
+
+/* Paragraph section titles (e.g., list h3) use the darker blue */
+.game-list h3 { color: var(--title-blue); margin: 0 0 0.25rem 0; font-size: 1.05rem; }
 
 
 
