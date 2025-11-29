@@ -68,7 +68,15 @@ header h1 {
 
 /* Columns used on index */
 .columns { display: flex; gap: 3rem; align-items: flex-start; flex-wrap: wrap; justify-content: space-between; }
-.col { flex: 0 1 42%; min-width: var(--col-min); font-size: 1.05rem; line-height: 1.6; color: #dfeaf6; }
+.col {
+	flex: 0 1 42%;
+	min-width: var(--col-min);
+	font-size: 1.05rem;
+	line-height: 1.6;
+	color: #dfeaf6;
+	padding: 1.25rem; /* increased internal padding for readability */
+	border-radius: 10px;
+}
 
 /* Main card style for centered paragraphs */
 .card {
@@ -92,6 +100,11 @@ footer { margin-top: 2rem; }
 	.columns { flex-direction: column; }
 	.links { right: 0.5rem; left: 0.5rem; justify-content: center; }
 	header h1 { font-size: var(--title-size-sm); }
+}
+
+@media (max-width: 560px) {
+	/* reduce column padding on narrow screens to save space */
+	.col { padding: 0.75rem; }
 }
 
 /* Decorative gaming graphics on index page (left + right) */
