@@ -4,10 +4,14 @@
 */
 
 :root {
-	--max-width: 900px;
-	--gap: 1.5rem;
-	--link-bg: #efefef;
-	--link-color: #1a73e8; /* blue */
+	--max-width: 1000px;
+	--gap: 1.25rem;
+	--link-bg: rgba(255,255,255,0.06);
+	--link-color: #1a73e8; /* primary blue for links */
+	--accent: #00e5ff; /* neon accent */
+	--bg: #061024; /* dark gaming background */
+	--panel: #071827;
+	--muted: #9aa7bd;
 	--title-size: 3rem;
 	--title-size-sm: 2rem;
 	--col-min: 220px;
@@ -18,6 +22,77 @@ a {
 	color: var(--link-color);
 	font-weight: 700;
 }
+
+/* Base reset and page background */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+	margin: 0;
+	font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	background: radial-gradient(1200px 600px at 10% 10%, rgba(0,230,255,0.03), transparent), var(--bg);
+	color: #e6eef6;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Site container */
+main, .site-main { max-width: var(--max-width); margin: 0 auto; padding: 1.5rem; }
+
+/* Header: centered top with subtle panel look */
+header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.65rem 1rem;
+	backdrop-filter: blur(6px);
+	background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+	z-index: 10;
+}
+
+header h1 {
+	margin: 0;
+	font-size: clamp(1.6rem, 3.2vw, var(--title-size));
+	letter-spacing: 0.5px;
+	color: var(--accent);
+	text-shadow: 0 4px 18px rgba(0,0,0,0.6);
+}
+
+/* Top-right small link area */
+.top-right { position: fixed; top: 0.6rem; right: 1rem; z-index: 11; }
+.top-right a { color: var(--link-color); background: transparent; padding: 0.25rem .5rem; border-radius: 6px; }
+
+/* Columns used on index */
+.columns { display: flex; gap: var(--gap); align-items: flex-start; flex-wrap: wrap; }
+.col { flex: 1 1 300px; min-width: var(--col-min); font-size: 1.05rem; line-height: 1.6; color: #dfeaf6; }
+
+/* Main card style for centered paragraphs */
+.card {
+	background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+	border: 1px solid rgba(255,255,255,0.03);
+	padding: 1.25rem;
+	border-radius: 12px;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+/* Bottom-right fixed game links */
+.links { position: fixed; right: 1rem; bottom: 1rem; display: flex; gap: var(--gap); align-items: center; z-index: 20; }
+.links a { display: inline-block; margin: 0; padding: 0.5rem 0.9rem; text-decoration: none; border-radius: 8px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); color: var(--link-color); box-shadow: 0 6px 18px rgba(0,0,0,0.45); }
+
+.links a:hover { filter: brightness(1.05); transform: translateY(-1px); }
+
+/* Footer spacing (in case used) */
+footer { margin-top: 2rem; }
+
+@media (max-width: 760px) {
+	.columns { flex-direction: column; }
+	.links { right: 0.5rem; left: 0.5rem; justify-content: center; }
+	header h1 { font-size: var(--title-size-sm); }
+}
+
 
 /* Header: keep the page title centered at the top-middle of the viewport */
 header {
