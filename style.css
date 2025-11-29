@@ -134,6 +134,30 @@ body.index::after {
 /* Ensure content sits above the decorative shapes */
 header, .site-main, .card, .links, .top-right { position: relative; z-index: 5; }
 
+/* Center the introductory line above the game list in the side column */
+#side-paragraph > p:first-of-type {
+	text-align: center;
+	font-weight: 600;
+	color: var(--accent);
+	max-width: 44rem;
+	margin: 0 auto 0.75rem auto;
+}
+
+.game-list { margin: 0; padding-left: 0; }
+.game-list li { margin: 0 0 1rem 0; padding: 0; }
+
+/* Style and center the intro/title line for the main paragraph */
+#main-paragraph > .intro-line {
+	text-align: center;
+	font-weight: 700;
+	color: var(--accent);
+	font-size: 1.25rem;
+	margin: 0 0 0.9rem 0;
+}
+
+/* Slight spacing for the main paragraph block */
+#main-paragraph p { margin: 0 0 0.9rem 0; }
+
 
 
 /* Header: keep the page title centered at the top-middle of the viewport */
