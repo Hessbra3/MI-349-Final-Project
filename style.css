@@ -37,7 +37,7 @@ body {
 }
 
 /* Site container */
-main, .site-main { max-width: var(--max-width); margin: 0 auto; padding: 1.5rem; }
+main, .site-main { max-width: var(--max-width); margin: 0 auto; padding: 0.75rem 0.75rem; }
 
 /* Header: centered top with subtle panel look */
 header {
@@ -67,8 +67,8 @@ header h1 {
 .top-right a { color: var(--link-color); background: transparent; padding: 0.25rem .5rem; border-radius: 6px; }
 
 /* Columns used on index */
-.columns { display: flex; gap: calc(var(--gap) * 1.5); align-items: flex-start; flex-wrap: wrap; justify-content: space-between; }
-.col { flex: 0 1 48%; min-width: var(--col-min); font-size: 1.05rem; line-height: 1.6; color: #dfeaf6; }
+.columns { display: flex; gap: 3rem; align-items: flex-start; flex-wrap: wrap; justify-content: space-between; }
+.col { flex: 0 1 42%; min-width: var(--col-min); font-size: 1.05rem; line-height: 1.6; color: #dfeaf6; }
 
 /* Main card style for centered paragraphs */
 .card {
@@ -160,7 +160,13 @@ header, .site-main, .card, .links, .top-right { position: relative; z-index: 5; 
 #main-paragraph p { margin: 0 0 0.9rem 0; }
 
 /* Paragraph section titles (e.g., list h3) use the darker blue */
-.game-list h3 { color: var(--title-blue); margin: 0 0 0.25rem 0; font-size: 1.05rem; }
+.game-list h3 {
+	color: var(--title-blue);
+	margin: 0 0 0.25rem 0;
+	font-size: 1.25rem; /* restored larger size */
+	font-weight: 700;
+	letter-spacing: 0.2px;
+}
 
 
 
