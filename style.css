@@ -172,7 +172,9 @@ header, .site-main, .card, .links, .top-right { position: relative; z-index: 5; 
 /* Slight spacing for the main paragraph block */
 #main-paragraph p {
 	margin: 0 0 0.9rem 0;
-	font-size: 0.9rem; /* reduced from ~1.05rem — two size steps smaller for the main body */
+	/* Slightly larger than before on wide screens, but responsive and capped
+		 so it won't force vertical scrolling on smaller viewports. */
+	font-size: clamp(0.95rem, 0.9rem + 0.8vw, 1.05rem);
 	line-height: 1.6;
 }
 
