@@ -170,7 +170,11 @@ header, .site-main, .card, .links, .top-right { position: relative; z-index: 5; 
 }
 
 /* Slight spacing for the main paragraph block */
-#main-paragraph p { margin: 0 0 0.9rem 0; }
+#main-paragraph p {
+	margin: 0 0 0.9rem 0;
+	font-size: 0.9rem; /* reduced from ~1.05rem — two size steps smaller for the main body */
+	line-height: 1.6;
+}
 
 /* Paragraph section titles (e.g., list h3) use the darker blue */
 .game-list h3 {
