@@ -1,11 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Game 1</title>
+        <style>
+            /* Layout for Game 1 page */
+            :root {
+                --gap: 0.6rem;
+                --link-bg: #efefef;
+                --link-color: #111;
+            }
+
+            html, body {
+                height: 100%;
+            }
+
+            body {
+                margin: 0;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+                color: #111;
+            }
+
+            /* Header centered at top */
+            header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.75rem 1rem;
+                background: transparent;
+                z-index: 10;
+            }
+
+            header h1 {
+                margin: 0;
+                font-size: 1.6rem;
+            }
+
+            /* Top-right Home link */
+            .top-right {
+                position: fixed;
+                top: 0.5rem;
+                right: 1rem;
+                z-index: 11;
+            }
+
+            .top-right a {
+                text-decoration: none;
+                color: inherit;
+                padding: 0.25rem 0.5rem;
+                border-radius: 4px;
+            }
+
+            /* Main content vertically and horizontally centered */
+            main {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 4rem 1rem 3.5rem; /* top padding prevents overlap with fixed header */
+                box-sizing: border-box;
+            }
+
+            main p {
+                max-width: 760px;
+                text-align: center;
+                font-size: 1.125rem;
+                line-height: 1.6;
+                margin: 0;
+            }
+
+            /* Bottom-right game links */
+            .bottom-right {
+                position: fixed;
+                right: 1rem;
+                bottom: 1rem;
+                display: flex;
+                gap: var(--gap);
+                z-index: 11;
+            }
+
+            .bottom-right a {
+                text-decoration: none;
+                padding: 0.45rem 0.8rem;
+                border-radius: 6px;
+                background: var(--link-bg);
+                color: var(--link-color);
+                box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+            }
+
+            @media (max-width: 560px) {
+                header h1 { font-size: 1.2rem; }
+                .bottom-right { right: 0.5rem; left: 0.5rem; justify-content: center; }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Game 1</h1>
+        </header>
+
+        <div class="top-right"><a href="index.html">Home</a></div>
+
+        <main>
+            <p>
+                Welcome to Game 1 — a short prototype built for fun. This demo focuses on quick play
+                sessions and simple mechanics; try the other games using the links in the bottom-right.
+            </p>
+        </main>
+
+        <div class="bottom-right">
+            <a href="game2.html">Game 2</a>
+            <a href="game3.html">Game 3</a>
+        </div>
+    </body>
 </html>
