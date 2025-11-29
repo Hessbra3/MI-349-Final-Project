@@ -165,7 +165,7 @@ header, .site-main, .card, .links, .top-right { position: relative; z-index: 5; 
 	text-align: center;
 	font-weight: 700;
 	color: var(--title-blue);
-	font-size: 1.25rem;
+	font-size: 1.20rem;
 	margin: 0 0 0.9rem 0;
 }
 
