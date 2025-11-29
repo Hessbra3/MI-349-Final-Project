@@ -7,10 +7,16 @@
 	--max-width: 900px;
 	--gap: 1.5rem;
 	--link-bg: #efefef;
-	--link-color: #111;
+	--link-color: #1a73e8; /* blue */
 	--title-size: 3rem;
 	--title-size-sm: 2rem;
 	--col-min: 220px;
+}
+
+/* Make all links blue and bold site-wide */
+a {
+	color: var(--link-color);
+	font-weight: 700;
 }
 
 /* Header: keep the page title centered at the top-middle of the viewport */
@@ -52,15 +58,25 @@ main {
 	line-height: 1.5;
 }
 
-/* Small visual treatment for the footer links */
+/* Small visual treatment for the footer links; move to bottom-right */
 footer {
 	margin-top: 3rem;
-	text-align: center;
+}
+
+/* fixed bottom-right links on index.html */
+.links {
+	position: fixed;
+	right: 1rem;
+	bottom: 1rem;
+	display: flex;
+	gap: var(--gap);
+	align-items: center;
+	z-index: 20;
 }
 
 .links a {
 	display: inline-block;
-	margin-right: 1rem;
+	margin: 0;
 	padding: 0.5rem 1rem;
 	text-decoration: none;
 	border-radius: 6px;
@@ -75,6 +91,13 @@ footer {
 
 	.columns {
 		flex-direction: column;
+	}
+
+	/* center the bottom links on very small screens */
+	.links {
+		right: 0.5rem;
+		left: 0.5rem;
+		justify-content: center;
 	}
 }
 
