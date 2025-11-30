@@ -146,7 +146,7 @@ body.game1 .page-art {
 	/* move the art higher (toward top) and limit its vertical reach so it
 	   can't extend down to the bottom-right links. If it would, it'll be
 	   automatically constrained by max-height. */
-	right: clamp(1rem, 4vw, 6rem);
+	right: clamp(6rem, 10vw, 12rem);
 	top: 30%;
 	transform: translateY(-35%);
 	width: min(34vw, 480px);
