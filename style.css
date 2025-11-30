@@ -141,7 +141,6 @@ footer { margin-top: 2rem; }
 /* Game1-specific layout: move the page-art to the right and shift main content left
 	 so the image and text can sit side-by-side without overlapping. */
 body.game1 .page-art {
-	left: auto;
 	/* position the art between the paragraph and the right edge, vertically centered */
 	/* move the art higher (toward top) and limit its vertical reach so it
 	   can't extend down to the bottom-right links. If it would, it'll be
