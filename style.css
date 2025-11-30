@@ -142,20 +142,21 @@ footer { margin-top: 2rem; }
 	 so the image and text can sit side-by-side without overlapping. */
 body.game1 .page-art {
 	left: auto;
-	/* position the art to the right but moved leftwards so it sits
-	   closer to the main paragraph; keep a bottom clearance so it
-	   cannot overlap the fixed bottom-right links. */
-	right: clamp(6rem, 12vw, 16rem);
-	top: 36%;
+	/* position the art between the paragraph and the right edge, vertically centered */
+	right: clamp(1rem, 4vw, 6rem);
+	/* move the art higher (toward top) and limit its vertical reach so it
+	   can't extend down to the bottom-right links. If it would, it'll be
+	   automatically constrained by max-height. */
+	top: 30%;
 	transform: translateY(-50%);
-	width: min(28vw, 420px);
-	max-height: min(46vh, calc(100vh - 10rem)); /* keep at least ~10rem clear at bottom */
+	width: min(34vw, 480px);
+	max-height: min(50vh, calc(100vh - 8rem)); /* keep at least ~8rem clear at bottom */
 	opacity: 0.78; /* a touch stronger */
 }
 
 /* Reserve space on the right for the image so the card/content doesn't overlap it */
 body.game1 .site-main {
-	padding-right: calc(min(28vw, 420px) + clamp(6rem, 12vw, 16rem) + 1rem);
+	padding-right: calc(min(34vw, 480px) + clamp(1rem, 4vw, 6rem) + 1rem);
 }
 
 /* Keep the card narrower so it doesn't extend under the art */
@@ -165,7 +166,7 @@ body.game1 .card {
 
 @media (max-width: 1000px) {
 	/* reduce reserved right padding on medium screens */
-	body.game1 .site-main { padding-right: calc(min(28vw, 380px) + clamp(4rem, 10vw, 12rem)); }
+	body.game1 .site-main { padding-right: calc(min(34vw, 460px) + clamp(1rem, 4vw, 6rem)); }
 }
 
 
