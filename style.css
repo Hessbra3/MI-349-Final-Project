@@ -166,7 +166,8 @@ body.index::after {
 }
 
 /* Ensure content sits above the decorative shapes */
-header, .site-main, .card, .links, .top-right { position: relative; z-index: 5; }
+header, .site-main, .card, .links { position: relative; z-index: 5; }
+.top-right { position: fixed; top: 0.6rem; right: 1rem; z-index: 22; }
 
 /* Center the introductory line above the game list in the side column */
 #side-paragraph > p:first-of-type {
