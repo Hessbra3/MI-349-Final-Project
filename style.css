@@ -95,7 +95,8 @@ header h1 {
 
 /* Slightly larger font specifically for game1 page body text */
 body.game1 .site-main .card p {
-  font-size: clamp(1.08rem, 1.05rem + 1.0vw, 1.3rem);
+	/* slightly smaller to fit side-by-side layout while staying readable */
+	font-size: clamp(0.95rem, 0.95rem + 0.4vw, 1.05rem);
 }
 
 /* Bottom-right fixed game links */
@@ -141,16 +142,17 @@ footer { margin-top: 2rem; }
 	 so the image and text can sit side-by-side without overlapping. */
 body.game1 .page-art {
 	left: auto;
-	right: 1rem;
+	/* move the art more toward center by using a viewport-based offset */
+	right: clamp(3rem, 8vw, 10rem);
 	transform: none;
-	width: min(38vw, 480px);
+	width: min(34vw, 420px);
 	bottom: 1.25rem;
-	opacity: 0.6;
+	opacity: 0.65; /* slightly stronger */
 }
 
 /* Reserve space on the right for the image so the card/content doesn't overlap it */
 body.game1 .site-main {
-	padding-right: calc(min(38vw, 480px) + 2rem);
+	padding-right: calc(min(34vw, 420px) + clamp(3rem, 8vw, 10rem) + 1rem);
 }
 
 /* Keep the card narrower so it doesn't extend under the art */
@@ -160,7 +162,7 @@ body.game1 .card {
 
 @media (max-width: 1000px) {
 	/* reduce reserved right padding on medium screens */
-	body.game1 .site-main { padding-right: calc(min(38vw, 380px) + 1.25rem); }
+	body.game1 .site-main { padding-right: calc(min(34vw, 380px) + clamp(2rem, 6vw, 8rem)); }
 }
 
 
