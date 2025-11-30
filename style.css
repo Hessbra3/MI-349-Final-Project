@@ -87,6 +87,12 @@ header h1 {
 	box-shadow: 0 6px 18px rgba(0,0,0,0.6);
 }
 
+/* Slightly larger, responsive body text for game pages (keeps content visible) */
+.site-main .card p {
+	font-size: clamp(1rem, 1rem + 0.9vw, 1.18rem);
+	line-height: 1.65;
+}
+
 /* Bottom-right fixed game links */
 .links { position: fixed; right: 1rem; bottom: 1rem; display: flex; gap: var(--gap); align-items: center; z-index: 20; }
 .links a { display: inline-block; margin: 0; padding: 0.5rem 0.9rem; text-decoration: none; border-radius: 8px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); color: var(--link-color); box-shadow: 0 6px 18px rgba(0,0,0,0.45); }
