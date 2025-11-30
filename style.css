@@ -122,7 +122,7 @@ footer { margin-top: 2rem; }
 /* Page art (Halo title) for game1 - decorative and non-interactive */
 .page-art {
 	position: fixed;
-	left: 50%;
+	left: 30%;
 	transform: translateX(-25%);
 	bottom: 0;
 	width: min(78vw, 720px);
@@ -148,7 +148,7 @@ body.game1 .page-art {
 	   automatically constrained by max-height. */
 	right: clamp(1rem, 4vw, 6rem);
 	top: 30%;
-	transform: translateY(-40%);
+	transform: translateY(-35%);
 	width: min(34vw, 480px);
 	max-height: min(50vh, calc(100vh - 8rem)); /* keep at least ~8rem clear at bottom */
 	opacity: 0.78; /* a touch stronger */
