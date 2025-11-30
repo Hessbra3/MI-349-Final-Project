@@ -107,6 +107,26 @@ footer { margin-top: 2rem; }
 	.col { padding: 0.75rem; }
 }
 
+/* Page art (Halo title) for game1 - decorative and non-interactive */
+.page-art {
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0;
+	width: min(78vw, 720px);
+	max-height: 32vh;
+	opacity: 0.22; /* subtle but visible */
+	pointer-events: none; /* never intercept clicks */
+	z-index: 1; /* behind content which has z-index 5+ */
+	filter: blur(0.6px) saturate(1.05);
+}
+
+/* keep the art off very small screens to avoid covering content */
+@media (max-width: 760px) {
+	.page-art { display: none; }
+}
+
+
 /* Decorative gaming graphics on index page (left + right) */
 body.index::before,
 body.index::after {
