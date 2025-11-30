@@ -356,3 +356,48 @@ footer {
 }
 
 
+/* Additional mobile-friendly adjustments */
+@media (max-width: 760px) {
+	/* Stack content, reduce paddings and keep everything readable */
+	main, .site-main { padding: 0.5rem; }
+	.col, .card { padding: 0.75rem; border-radius: 8px; }
+	header { padding: 0.5rem 0.75rem; }
+	header h1 { font-size: clamp(1.25rem, 6vw, 1.6rem); }
+
+	/* Make sure paragraphs are comfortably sized but don't force horizontal scroll */
+	.site-main .card p { font-size: clamp(0.95rem, 1rem + 1vw, 1.05rem); line-height: 1.5; }
+
+	/* Remove per-page right padding that reserved space for large art on desktop */
+	body.game1 .site-main,
+	body.game2 .site-main,
+	body.game3 .site-main { padding-right: 1rem; }
+
+	/* Hide or reduce decorative art on smaller screens to avoid overlap */
+	.page-art { display: none; }
+
+	/* Make the bottom links full-width-ish and easier to tap */
+	.links {
+		left: 0.5rem;
+		right: 0.5rem;
+		bottom: 0.6rem;
+		justify-content: center;
+		gap: 0.5rem;
+	}
+	.links a { padding: 0.6rem 0.9rem; font-size: 0.95rem; }
+}
+
+@media (max-width: 420px) {
+	/* Extra small screens — tighten spacing further */
+	header h1 { font-size: clamp(1rem, 7vw, 1.25rem); }
+	main, .site-main { padding: 0.4rem; }
+	.col, .card { padding: 0.5rem; }
+	.site-main .card p { font-size: 0.95rem; }
+
+	/* Ensure footer links don't cover content — push them slightly higher */
+	.links { bottom: 0.8rem; }
+}
+
+/* Prevent accidental horizontal scroll on very small devices */
+html, body { max-width: 100%; overflow-x: hidden; }
+
+
