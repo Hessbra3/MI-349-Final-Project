@@ -162,6 +162,28 @@ body.game1 .card {
 	max-width: 58ch;
 }
 
+/* Make game2 and game3 pages match game1's image placement and content spacing */
+body.game2 .page-art,
+body.game3 .page-art {
+	/* same placement/size as game1 */
+	right: clamp(1rem, 4vw, 6rem);
+	top: 30%;
+	transform: translateY(-35%);
+	width: min(34vw, 480px);
+	max-height: min(50vh, calc(100vh - 8rem));
+	opacity: 0.78;
+}
+
+body.game2 .site-main,
+body.game3 .site-main {
+	padding-right: calc(min(34vw, 480px) + clamp(1rem, 4vw, 6rem) + 1rem);
+}
+
+body.game2 .card,
+body.game3 .card {
+	max-width: 58ch;
+}
+
 @media (max-width: 1000px) {
 	/* reduce reserved right padding on medium screens */
 	body.game1 .site-main { padding-right: calc(min(34vw, 460px) + clamp(1rem, 4vw, 6rem)); }
