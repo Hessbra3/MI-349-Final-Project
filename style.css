@@ -126,7 +126,7 @@ footer { margin-top: 2rem; }
 	bottom: 0;
 	width: min(78vw, 720px);
 	max-height: 32vh;
-	opacity: 0.22; /* subtle but visible */
+	opacity: 0.55; /* stronger, less transparent */
 	pointer-events: none; /* never intercept clicks */
 	z-index: 1; /* behind content which has z-index 5+ */
 	filter: blur(0.6px) saturate(1.05);
@@ -135,6 +135,32 @@ footer { margin-top: 2rem; }
 /* keep the art off very small screens to avoid covering content */
 @media (max-width: 760px) {
 	.page-art { display: none; }
+}
+
+/* Game1-specific layout: move the page-art to the right and shift main content left
+	 so the image and text can sit side-by-side without overlapping. */
+body.game1 .page-art {
+	left: auto;
+	right: 1rem;
+	transform: none;
+	width: min(38vw, 480px);
+	bottom: 1.25rem;
+	opacity: 0.6;
+}
+
+/* Reserve space on the right for the image so the card/content doesn't overlap it */
+body.game1 .site-main {
+	padding-right: calc(min(38vw, 480px) + 2rem);
+}
+
+/* Keep the card narrower so it doesn't extend under the art */
+body.game1 .card {
+	max-width: 58ch;
+}
+
+@media (max-width: 1000px) {
+	/* reduce reserved right padding on medium screens */
+	body.game1 .site-main { padding-right: calc(min(38vw, 380px) + 1.25rem); }
 }
 
 
